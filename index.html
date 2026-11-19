@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Oat &amp; Ember Bakehouse · Westbrook</title>
+  <meta name="description" content="Naturally leavened bread, laminated pastries and celebration cakes in Westbrook. See today's bake, reserve for pickup and design your cake online." />
+  <meta name="theme-color" content="#3a2417" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='23' fill='%233a2417'/%3E%3Cpath d='M24 38V14' stroke='%23f2c14e' stroke-width='2.4' stroke-linecap='round'/%3E%3Cpath d='M24 18c-4-1-6-4-6-7 4 1 6 4 6 7zm0 6c-4-1-6-4-6-7 4 1 6 4 6 7zm0 6c-4-1-6-4-6-7 4 1 6 4 6 7zm0-12c4-1 6-4 6-7-4 1-6 4-6 7zm0 6c4-1 6-4 6-7-4 1-6 4-6 7zm0 6c4-1 6-4 6-7-4 1-6 4-6 7z' fill='%23f2c14e'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,500..700,100,1;1,9..144,500,100,1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="logo" viewBox="0 0 48 48">
+      <circle cx="24" cy="24" r="23" fill="#3a2417"/>
+      <path d="M24 39V14" stroke="#f2c14e" stroke-width="2.4" stroke-linecap="round"/>
+      <path d="M24 18c-4-1-6-4-6-7 4 1 6 4 6 7zm0 6c-4-1-6-4-6-7 4 1 6 4 6 7zm0 6c-4-1-6-4-6-7 4 1 6 4 6 7zm0-12c4-1 6-4 6-7-4 1-6 4-6 7zm0 6c4-1 6-4 6-7-4 1-6 4-6 7zm0 6c4-1 6-4 6-7-4 1-6 4-6 7z" fill="#f2c14e"/>
+      <path d="M17 40c2-3 5-3 7-6 2 3 5 3 7 6" stroke="#e36b4f" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </symbol>
+  </svg>
+
+  <div class="mock-bar" role="note">
+    <strong>Design inspiration</strong>
+    <nav class="mock-tabs" aria-label="Project views">
+      <a href="index.html" aria-current="page">Website</a>
+      <a href="project.html">Project hub</a>
+    </nav>
+  </div>
+
+  <header class="site-head">
+    <div class="wrap head-inner">
+      <a class="logo" href="#main" aria-label="Oat and Ember Bakehouse, home">
+        <svg aria-hidden="true"><use href="#logo"/></svg>
+        <span>Oat &amp; Ember<small>Bakehouse · Westbrook</small></span>
+      </a>
+      <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>Menu
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <a href="#today">Today's bake</a>
+        <a href="#oven">Bake times</a>
+        <a href="#cakes">Cakes</a>
+        <a href="#visit">Visit</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <button class="bag-btn" id="bag-open" type="button" aria-haspopup="dialog">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1 12H6L5 8zM9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="bag-word">Pickup order</span> <span class="bag-count" id="bag-count" data-n="0">0</span><span class="sr-only">items</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="status" id="status" aria-live="polite"><span class="dot" aria-hidden="true"></span><span id="status-text">Open today 7am–3pm</span></p>
+          <h1 id="hero-title">Slow bread, <em>baked</em> before sunrise.</h1>
+          <p class="lede">Naturally leavened loaves, butter-laminated pastries and celebration cakes, baked every morning on Elm Street. Reserve today's bake before it sells out.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-berry" href="#today">See today's bake
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="btn btn-line" href="#cakes">Design a cake</a>
+          </div>
+        </div>
+        <figure class="hero-art">
+          <img id="hero-img" src="img/hero-bakery.jpg" width="880" height="880" alt="A warm bakery counter with sourdough loaves, croissants and a celebration cake in morning light" fetchpriority="high" />
+          <p class="sticker" aria-hidden="true">Reserve &amp; skip the queue<small>pickup from 7am</small></p>
+        </figure>
+      </div>
+    </section>
+
+    <!-- TODAY'S BAKE -->
+    <section id="today" aria-labelledby="today-title" style="padding-top:24px">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">Today's bake</p>
+          <h2 id="today-title">Reserve it before it's gone.</h2>
+          <p>Stock updates live from the counter. Sold out? Pre-order for tomorrow and it'll be waiting with your name on it.</p>
+        </div>
+        <form class="menu-tools" id="menu-filters" aria-label="Filter today's bake">
+          <fieldset class="diet" style="flex:1 1 320px">
+            <legend>Show</legend>
+            <div class="cats" id="cats">
+              <label class="cat"><input type="radio" name="cat" value="" checked /><span>Everything</span></label>
+              <label class="cat"><input type="radio" name="cat" value="bread" /><span>Bread</span></label>
+              <label class="cat"><input type="radio" name="cat" value="pastry" /><span>Pastries</span></label>
+              <label class="cat"><input type="radio" name="cat" value="sweet" /><span>Sweet things</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="diet" style="flex:1 1 420px">
+            <legend>Hide anything containing</legend>
+            <div class="diet-row" id="allergen-filters"></div>
+          </fieldset>
+          <label class="pill-check" style="align-self:flex-end"><input type="checkbox" name="vegan" /><span>Vegan only</span></label>
+        </form>
+        <p class="menu-count" id="menu-count" aria-live="polite"></p>
+        <ul class="items" id="items" role="list"></ul>
+        <p class="allergy-note"><b>About allergens:</b> everything is made in one small kitchen that handles wheat, milk, eggs, tree nuts, sesame and soy. Filters hide items made <em>with</em> an ingredient, but we can't rule out traces. Severe allergy? Talk to us before ordering.</p>
+      </div>
+    </section>
+
+    <!-- BAKE SCHEDULE -->
+    <section class="oven" id="oven" aria-labelledby="oven-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">Fresh out of the oven</p>
+          <h2 id="oven-title">Know when to come in.</h2>
+          <p>Our ovens run from 4am. Here's when each batch hits the shelf, Tuesday to Sunday.</p>
+        </div>
+        <ol class="timeline" id="timeline"></ol>
+      </div>
+    </section>
+
+    <!-- CAKE BUILDER -->
+    <section class="cake-sec" id="cakes" aria-labelledby="cakes-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">Celebration cakes</p>
+          <h2 id="cakes-title">Design your cake in two minutes.</h2>
+          <p>Live price, real availability. We need three days' notice, and we'll confirm your request within one working day.</p>
+        </div>
+        <div class="builder">
+          <div class="preview" aria-live="polite">
+            <svg id="cake-svg" viewBox="0 0 360 320" role="img" aria-labelledby="cake-desc"><desc id="cake-desc">Cake preview</desc></svg>
+            <p class="p-price" id="p-price">$48</p>
+            <p class="p-sub" id="p-sub">6-inch · serves 8–10</p>
+          </div>
+          <form class="cake-form" id="cake-form" novalidate>
+            <fieldset><legend><span class="n" aria-hidden="true">1</span>Size</legend><div class="opts" id="o-size"></div></fieldset>
+            <fieldset><legend><span class="n" aria-hidden="true">2</span>Sponge</legend><div class="opts" id="o-sponge"></div></fieldset>
+            <fieldset><legend><span class="n" aria-hidden="true">3</span>Frosting</legend><div class="opts" id="o-frost"></div></fieldset>
+            <fieldset><legend><span class="n" aria-hidden="true">4</span>Finish</legend><div class="opts" id="o-deco"></div></fieldset>
+            <fieldset>
+              <legend><span class="n" aria-hidden="true">5</span>Message &amp; date</legend>
+              <div class="row2">
+                <div class="field"><label for="c-msg">Message on the board (optional)</label>
+                  <input id="c-msg" name="msg" maxlength="24" placeholder="Happy birthday!" aria-describedby="c-msg-hint" /><p class="hint" id="c-msg-hint"><span id="c-msg-left">24</span> characters left</p></div>
+                <div class="field"><label for="c-date">Collection date</label>
+                  <input id="c-date" name="date" type="date" aria-describedby="c-date-hint" /><p class="hint" id="c-date-hint"></p><p class="err" id="c-date-err" hidden></p></div>
+              </div>
+            </fieldset>
+            <div class="cake-sum">
+              <dl id="cake-lines"></dl>
+              <button class="btn btn-berry btn-block" type="submit">Request this cake</button>
+              <p class="hint" style="text-align:center;margin-top:8px">No payment now. You pay when you collect.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISIT -->
+    <section id="visit" aria-labelledby="visit-title">
+      <div class="wrap">
+        <div class="sec-head"><p class="eyebrow">Visit</p><h2 id="visit-title">Come say hello.</h2></div>
+        <div class="visit">
+          <div><h3>Opening hours</h3><div class="hours" id="hours"></div></div>
+          <div><h3>Find us</h3><p>48 Elm Street, Westbrook</p><p class="hint" style="margin-top:8px">Bike racks out front. Two-hour parking on Elm Street.</p></div>
+          <div><h3>Pickup</h3><p>Reserved orders wait on the shelf by the door. Show your pickup code at the counter, and skip the queue.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" aria-labelledby="faq-title" style="padding-top:0">
+      <div class="wrap">
+        <div class="sec-head"><p class="eyebrow">Questions</p><h2 id="faq-title">Good to know</h2></div>
+        <div class="faq">
+          <details><summary>How late can I reserve for today?</summary><p>Until 1pm, while stock lasts. Anything sold out today can be pre-ordered for tomorrow.</p></details>
+          <details><summary>What if I'm late to pick up?</summary><p>We hold reserved orders until closing. After that, unclaimed bread goes to our local food bank.</p></details>
+          <details><summary>Do you make gluten-free bread?</summary><p>Yes, a gluten-free loaf and a flourless chocolate cake every day. They're baked first, on cleaned trays, but in a kitchen that uses wheat.</p></details>
+          <details><summary>How far ahead should I order a cake?</summary><p>At least three days. For two-tier cakes or busy weekends, a week is safer. The date picker only shows dates we can do.</p></details>
+          <details><summary>Can I change or cancel a cake request?</summary><p>Yes, up to 48 hours before collection. Just reply to your confirmation email.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap foot-grid">
+      <div><p class="foot-logo">Oat &amp; Ember</p><p>A small bakehouse on Elm Street. Flour, water, salt and patience.</p></div>
+      <div><h2 class="foot-h">Find us</h2><p>48 Elm Street, Westbrook</p></div>
+      <div><h2 class="foot-h">Talk to us</h2><p><a href="tel:+15550148810">(555) 014-8810</a><br /><a href="mailto:hello@oatandember.example">hello@oatandember.example</a></p></div>
+    </div>
+    <div class="wrap foot-note"><p>Design inspiration · UX/UI website concept.</p></div>
+  </footer>
+
+  <!-- Pickup order drawer -->
+  <dialog class="drawer" id="order" aria-labelledby="order-title">
+    <div class="drawer-inner">
+      <div class="d-head"><h2 id="order-title">Pickup order</h2>
+        <button class="icon-btn" type="button" id="order-close" aria-label="Close pickup order"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+      <div class="d-body" id="order-body"></div>
+      <div class="d-foot" id="order-foot"></div>
+    </div>
+  </dialog>
+
+  <!-- Confirmation / cake request modal -->
+  <dialog class="modal" id="modal" aria-labelledby="m-title">
+    <form method="dialog" class="m-close"><button class="icon-btn" aria-label="Close" value="cancel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></form>
+    <div class="m-inner" id="m-inner"></div>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

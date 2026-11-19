@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Oat &amp; Ember · Project Hub</title>
+  <meta name="description" content="UX case study for a neighbourhood bakery website: sell-out analysis, counter observation, cake DM audit, personas, service blueprint, wireframes, visual design, testing and handoff." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='23' fill='%233a2417'/%3E%3Cpath d='M24 38V14' stroke='%23f2c14e' stroke-width='2.4'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,500..700,100,1;1,9..144,500,100,1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body class="hub">
+  <a class="skip" href="#main">Skip to content</a>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="logo" viewBox="0 0 48 48">
+      <circle cx="24" cy="24" r="23" fill="#3a2417"/>
+      <path d="M24 39V14" stroke="#f2c14e" stroke-width="2.4" stroke-linecap="round"/>
+      <path d="M24 18c-4-1-6-4-6-7 4 1 6 4 6 7zm0 6c-4-1-6-4-6-7 4 1 6 4 6 7zm0 6c-4-1-6-4-6-7 4 1 6 4 6 7zm0-12c4-1 6-4 6-7-4 1-6 4-6 7zm0 6c4-1 6-4 6-7-4 1-6 4-6 7zm0 6c4-1 6-4 6-7-4 1-6 4-6 7z" fill="#f2c14e"/>
+      <path d="M17 40c2-3 5-3 7-6 2 3 5 3 7 6" stroke="#e36b4f" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </symbol>
+  </svg>
+
+  <div class="mock-bar" role="note">
+    <strong>Design inspiration</strong>
+    <nav class="mock-tabs" aria-label="Project views"><a href="index.html">Website</a><a href="project.html" aria-current="page">Project hub</a></nav>
+  </div>
+
+  <header class="hub-cover">
+    <div class="wrap">
+      <p class="eyebrow">Case study · Bakery website</p>
+      <h1>Fewer empty shelves, <em>fewer DMs</em>, happier mornings.</h1>
+      <dl class="hub-meta">
+        <div><dt>Client</dt><dd>Oat &amp; Ember Bakehouse, Westbrook</dd></div>
+        <div><dt>Role</dt><dd>Service design, UX &amp; UI</dd></div>
+        <div><dt>Timeline</dt><dd>5 weeks</dd></div>
+        <div><dt>Deliverables</dt><dd>Responsive site, pickup ordering, cake builder, service blueprint</dd></div>
+      </dl>
+      <ul class="outcomes" role="list">
+        <li><b>Live stock</b><span>from the counter, not guesswork</span></li>
+        <li><b>3 taps</b><span>to reserve a croissant</span></li>
+        <li><b>1 form</b><span>replaces a 14-message cake thread</span></li>
+        <li><b>WCAG 2.2 AA</b><span>contrast and forms</span></li>
+      </ul>
+    </div>
+  </header>
+
+  <nav class="phase-nav" aria-label="Project phases">
+    <div class="wrap"><ol>
+      <li><a href="#brief">Brief</a></li><li><a href="#research">Research</a></li><li><a href="#define">Define</a></li><li><a href="#blueprint">Blueprint</a></li>
+      <li><a href="#wireframes">Wireframes</a></li><li><a href="#visual">Visual design</a></li><li><a href="#testing">Testing</a></li><li><a href="#handoff">Handoff</a></li>
+    </ol></div>
+  </nav>
+
+  <main id="main">
+    <section id="brief" aria-labelledby="h-brief">
+      <div class="wrap">
+        <p class="phase">01 · Brief</p>
+        <h2 id="h-brief">"By ten, half the shelf is empty."</h2>
+        <div class="split">
+          <figure class="client-quote">
+            <blockquote>"We start baking at four. By ten o'clock the sourdough and cardamom buns are gone, and people walk out disappointed. Then every cake order turns into twenty Instagram messages about sizes and dates, which we answer at night."</blockquote>
+            <figcaption>Owner and head baker, kick-off session</figcaption>
+          </figure>
+          <div>
+            <h3 class="mini-h">Goals</h3>
+            <ol class="num-list">
+              <li>Let regulars <b>reserve today's bake</b> before it sells out.</li>
+              <li>Turn cake DMs into <b>one complete request</b>.</li>
+              <li>Make <b>allergens findable</b> without asking at the counter.</li>
+              <li>Show <b>when each bake comes out</b>.</li>
+            </ol>
+            <h3 class="mini-h">Constraints</h3>
+            <ul class="tag-list" role="list"><li>4-person team</li><li>Baking starts at 4am</li><li>Existing point-of-sale system</li><li>No staff time for admin</li><li>One phase</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="tint" aria-labelledby="h-research">
+      <div class="wrap">
+        <p class="phase">02 · Research</p>
+        <h2 id="h-research">The shelf empties on a schedule.</h2>
+        <p class="note-illus">Illustrative data: figures show the research method.</p>
+        <ul class="methods" role="list">
+          <li><b>Sell-out analysis</b><span>Six weeks of point-of-sale data: when does each item run out?</span></li>
+          <li><b>Counter observation</b><span>Two mornings, 6:45–11am, logging every question asked</span></li>
+          <li><b>Cake DM audit</b><span>40 Instagram cake-order threads, from first message to confirmation</span></li>
+          <li><b>10 intercept interviews</b><span>Five minutes at the counter, with a free coffee as thanks</span></li>
+        </ul>
+        <div class="charts">
+          <figure class="chart">
+            <figcaption><b>Average sell-out time</b><span>Weekdays, doors open at 7:00am</span></figcaption>
+            <ul class="timebars" role="list">
+              <li style="--t:135"><span class="lbl">Cardamom bun</span><span class="bar"><i></i></span><b>9:15</b></li>
+              <li style="--t:160"><span class="lbl">Country sourdough</span><span class="bar"><i></i></span><b>9:40</b></li>
+              <li style="--t:185"><span class="lbl">Pain au chocolat</span><span class="bar"><i></i></span><b>10:05</b></li>
+              <li style="--t:210"><span class="lbl">Butter croissant</span><span class="bar"><i></i></span><b>10:30</b></li>
+              <li style="--t:250"><span class="lbl">Seeded rye</span><span class="bar"><i></i></span><b>11:10</b></li>
+            </ul>
+            <p class="axis" aria-hidden="true"><span>7am</span><span>9am</span><span>11am</span><span>1pm</span></p>
+          </figure>
+          <div class="stats">
+            <div><b>14</b><span>messages, on average, to confirm one cake order</span></div>
+            <div><b>2.3 days</b><span>from first message to a confirmed cake</span></div>
+            <div><b>1 in 5</b><span>cake threads included an allergen question</span></div>
+            <div><b>31</b><span>"What's left?" or "When is it out?" questions in two mornings</span></div>
+          </div>
+        </div>
+        <h3 class="mini-h" style="margin-top:44px">Key insights</h3>
+        <ol class="insights">
+          <li><b>Regulars plan, but can't commit.</b> They know what they want, just not whether it'll still be there.<q>I'd happily pay last night if it meant the bun was mine.</q><cite>Intercept interview 4</cite></li>
+          <li><b>Cake orders stall on two facts.</b> Price and the earliest date caused most of the back-and-forth.<q>I just wanted to know if Saturday was possible.</q><cite>DM audit, thread 17</cite></li>
+          <li><b>Allergens are asked out loud, every day.</b> Staff answer the same questions while the queue grows.<q>Does this one have nuts? What about this one?</q><cite>Counter observation, day 2</cite></li>
+          <li><b>Timing is local knowledge.</b> Regulars know the rye comes out at 9:30. Newcomers arrive at 11 and find nothing.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="define" aria-labelledby="h-define">
+      <div class="wrap">
+        <p class="phase">03 · Define</p>
+        <h2 id="h-define">Three mornings, three needs.</h2>
+        <div class="personas">
+          <article class="persona"><p class="p-k">Primary</p><h3>The commuter regular</h3><p class="p-sum">Grabs a croissant at 7:45 on the way to the train.</p>
+            <dl><div><dt>Needs</dt><dd>To reserve the night before, then skip the queue</dd></div><div><dt>Frustration</dt><dd>Queueing, only to find it's gone</dd></div></dl></article>
+          <article class="persona"><p class="p-k">Primary</p><h3>The celebration planner</h3><p class="p-sum">Ordering a birthday cake for 15, two weeks out.</p>
+            <dl><div><dt>Needs</dt><dd>Price and date up front, plus a picture of what they'll get</dd></div><div><dt>Frustration</dt><dd>Days of messages to get a quote</dd></div></dl></article>
+          <article class="persona"><p class="p-k">Secondary</p><h3>The allergy-aware parent</h3><p class="p-sum">Their child has a tree-nut allergy.</p>
+            <dl><div><dt>Needs</dt><dd>To filter <em>out</em> what's unsafe, with honest trace warnings</dd></div><div><dt>Frustration</dt><dd>Asking about every single item</dd></div></dl></article>
+        </div>
+        <h3 class="mini-h" style="margin-top:56px">How might we…</h3>
+        <ul class="hmw" role="list">
+          <li>…let regulars <b>claim</b> a bake before it sells out?</li>
+          <li>…give cake planners a <b>price and a date</b> in one go?</li>
+          <li>…make allergen checks <b>self-serve</b>, but still honest?</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="blueprint" class="tint" aria-labelledby="h-blue">
+      <div class="wrap">
+        <p class="phase">04 · Service blueprint</p>
+        <h2 id="h-blue">Designing the whole pickup, not just the page.</h2>
+        <p class="lede-sm">A website that takes reservations changes work in the kitchen. The blueprint maps what the customer sees against what the team has to do, so the new flow fits a 4am start.</p>
+        <p class="bp-hint" aria-hidden="true">Swipe to see all four stages →</p>
+        <div class="bp-wrap" tabindex="0" role="region" aria-label="Service blueprint, scrollable">
+          <table class="blueprint">
+            <caption class="sr-only">Service blueprint for reserve-and-pickup</caption>
+            <thead><tr><td></td><th scope="col">Browse</th><th scope="col">Reserve</th><th scope="col">Prepare</th><th scope="col">Pick up</th></tr></thead>
+            <tbody>
+              <tr class="r-cust"><th scope="row">Customer</th><td>Checks today's bake and stock on their phone</td><td>Picks items, a day and a time, and gets a pickup code</td><td>Gets a reminder text 30 minutes before</td><td>Walks past the queue and shows the code</td></tr>
+              <tr class="r-line"><td colspan="5"><span>Line of interaction</span></td></tr>
+              <tr class="r-front"><th scope="row">Front of house</th><td></td><td></td><td>Bags orders by pickup time on the "Reserved" shelf</td><td>Matches the code, takes payment, done in 20 seconds</td></tr>
+              <tr class="r-line vis"><td colspan="5"><span>Line of visibility</span></td></tr>
+              <tr class="r-back"><th scope="row">Back of house</th><td>Counter updates the count when a tray comes out</td><td></td><td>The 6am print-out of tomorrow's reservations adjusts the bake quantities</td><td>Unclaimed orders go to the food bank at closing</td></tr>
+              <tr class="r-sys"><th scope="row">Systems</th><td>Point of sale pushes stock to the site every 5 minutes</td><td>Reservation holds stock; same-day cut-off at 1pm</td><td>Automated SMS; kitchen ticket printer</td><td>Point of sale marks the order collected</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="bp-note"><b>Key decision:</b> reservations print in the kitchen at 6am, so bakers can <em>bake more</em> of what's pre-ordered rather than set aside existing stock. That turns pre-orders into extra sales, not just redistributed ones.</p>
+      </div>
+    </section>
+
+    <section id="wireframes" aria-labelledby="h-wf">
+      <div class="wrap">
+        <p class="phase">05 · Wireframes</p>
+        <h2 id="h-wf">Sketch, review, repeat.</h2>
+        <p class="lede-sm">Mobile-first, low-fidelity frames, reviewed with the owner over coffee at 3pm, after the ovens were off.</p>
+        <div class="wires">
+          <figure class="wire"><div class="phone"><div class="w-bar"></div><div class="w-chips"><span class="on"></span><span></span><span></span></div><div class="w-card2"><span class="ok"></span></div><div class="w-card2"><span class="low"></span></div><div class="w-card2 out"><span class="out"></span><i>1</i></div></div>
+            <figcaption><b>Today's bake</b><span><i>1</i> Sold-out items stay visible, with "Pre-order for tomorrow".</span></figcaption></figure>
+          <figure class="wire"><div class="phone"><div class="w-bar"></div><div class="w-h2"></div><div class="w-pills"><span></span><span></span><span class="on"></span><span></span></div><div class="w-list2"><span></span><span></span><span></span></div><i class="pin">2</i></div>
+            <figcaption><b>Allergen filter</b><span><i>2</i> "Hide anything containing…" works how allergy families think.</span></figcaption></figure>
+          <figure class="wire"><div class="phone"><div class="w-bar"></div><div class="w-cake"><i>3</i></div><div class="w-price"></div><div class="w-opts"><span></span><span></span><span></span><span></span></div></div>
+            <figcaption><b>Cake builder</b><span><i>3</i> A live preview and price that change with every choice.</span></figcaption></figure>
+          <figure class="wire"><div class="phone"><div class="w-bar"></div><div class="w-h2"></div><div class="w-code"><i>4</i></div><div class="w-list2"><span></span><span></span></div><div class="w-btn"></div></div>
+            <figcaption><b>Pickup code</b><span><i>4</i> A big, readable code. Staff can match it in seconds.</span></figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="visual" class="tint" aria-labelledby="h-visual">
+      <div class="wrap">
+        <p class="phase">06 · Visual design</p>
+        <h2 id="h-visual">Warm as the first loaf out of the oven.</h2>
+        <div class="vis-grid">
+          <div class="vis-card brand"><svg viewBox="0 0 48 48" width="96" height="96" aria-hidden="true"><use href="#logo"/></svg><p class="b-name">Oat &amp; Ember</p><p class="small">A wheat ear rising from an ember: grain and fire, the only two things a bakery truly needs.</p></div>
+          <div class="vis-card"><h3 class="mini-h">Colour (contrast checked)</h3>
+            <ul class="pal" role="list">
+              <li><i style="background:#3a2417"></i><b>Crust</b><span>Text · 13.4:1</span></li>
+              <li><i style="background:#9b2f45"></i><b>Berry</b><span>Actions · white on it 7.3:1</span></li>
+              <li><i style="background:#4f6b4a"></i><b>Sage</b><span>In stock, vegan · 5.5:1</span></li>
+              <li><i style="background:#f2c14e"></i><b>Butter</b><span>Highlights · crust on it 8.7:1</span></li>
+              <li><i style="background:#fbf5ea;box-shadow:inset 0 0 0 1px #eadcc6"></i><b>Cream</b><span>Background</span></li>
+            </ul></div>
+          <div class="vis-card"><h3 class="mini-h">Type</h3><p class="t-d">Fraunces</p><p class="small">A soft, slightly wonky serif, like handwriting on a chalkboard.</p><p class="t-b">DM Sans</p><p class="small">Clean and friendly for prices, stock and forms.</p></div>
+        </div>
+        <h3 class="mini-h" style="margin-top:48px">Tone of voice</h3>
+        <div class="tone">
+          <div class="do"><p class="t-k">Do</p><p>"Sold out today · Pre-order for tomorrow"</p><p>"We need three days' notice. The earliest is Sun, Nov 22"</p><p>"We can't rule out traces."</p></div>
+          <div class="dont"><p class="t-k">Don't</p><p>"Out of stock"</p><p>"Invalid date"</p><p>"Nut-free!"</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testing" aria-labelledby="h-test">
+      <div class="wrap">
+        <p class="phase">07 · Usability testing</p>
+        <h2 id="h-test">Five customers, four tasks, five fixes.</h2>
+        <p class="note-illus">Illustrative results: a first-click test followed by moderated sessions on participants' phones.</p>
+        <div class="tasks-wrap">
+          <table class="tasks">
+            <caption class="sr-only">Task success, round 1 and round 2</caption>
+            <thead><tr><th scope="col">Task</th><th scope="col">Round 1</th><th scope="col">Round 2</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Find a pastry safe for a nut allergy</th><td><span class="score" style="--s:2">2/5</span></td><td><span class="score" style="--s:5">5/5</span></td></tr>
+              <tr><th scope="row">Reserve 2 croissants for tomorrow at 8am</th><td><span class="score" style="--s:4">4/5</span></td><td><span class="score" style="--s:5">5/5</span></td></tr>
+              <tr><th scope="row">Price a birthday cake for 15 people</th><td><span class="score" style="--s:3">3/5</span></td><td><span class="score" style="--s:5">5/5</span></td></tr>
+              <tr><th scope="row">Find out when sourdough comes out</th><td><span class="score" style="--s:5">5/5</span></td><td><span class="score" style="--s:5">5/5</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <ol class="changes">
+          <li><p class="c-was">A "Show nut-free" filter implied a guarantee, and three people distrusted it.</p><p class="c-now">Now it's "Hide anything containing…", plus an honest note about traces.</p></li>
+          <li><p class="c-was">Sold-out items disappeared, so people thought the bakery didn't make them.</p><p class="c-now">Now they stay visible, with "Sold out today · Pre-order for tomorrow".</p></li>
+          <li><p class="c-was">The cake price only appeared at the end.</p><p class="c-now">Now a live price sits under the preview, with an itemised summary.</p></li>
+          <li><p class="c-was">The date picker allowed tomorrow and Mondays, and the request bounced.</p><p class="c-now">Now the earliest date is shown up front, and impossible dates explain why.</p></li>
+          <li><p class="c-was">The pickup code was small text in a sentence.</p><p class="c-now">Now it's a large, dashed "ticket" that staff can read at arm's length.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="handoff" class="tint" aria-labelledby="h-handoff">
+      <div class="wrap">
+        <p class="phase">08 · Handoff</p>
+        <h2 id="h-handoff">Runs itself while the team bakes.</h2>
+        <div class="handoff">
+          <div><h3 class="mini-h">For the developer</h3>
+            <ul class="checks" role="list">
+              <li>Stock sync from the point-of-sale system every 5 minutes, with a "last updated" timestamp</li>
+              <li>Business rules as config: same-day cut-off, 3-day cake lead time, closed days</li>
+              <li>Component states: in stock, low, sold out, reserved, error</li>
+              <li>Analytics events: <code>reserve</code>, <code>preorder_tomorrow</code>, <code>allergen_filter</code>, <code>cake_request</code></li>
+            </ul></div>
+          <div><h3 class="mini-h">For the team</h3>
+            <ul class="checks" role="list">
+              <li>6am kitchen print-out of the day's reservations</li>
+              <li>A "Reserved" shelf by the door, sorted by pickup time</li>
+              <li>Cake requests arrive as one structured email, not a DM thread</li>
+              <li>Unclaimed orders go to the food bank at closing</li>
+            </ul></div>
+        </div>
+        <h3 class="mini-h" style="margin-top:44px">Phase 2 roadmap</h3>
+        <ol class="roadmap">
+          <li><b>Pay ahead</b><span>Optional card payment to cut no-shows</span></li>
+          <li><b>Standing orders</b><span>"A sourdough every Saturday" for regulars</span></li>
+          <li><b>Wholesale portal</b><span>Next-day orders for local cafés</span></li>
+        </ol>
+        <div class="hub-cta">
+          <h2>Have a look around.</h2>
+          <p>Reserve today's bake, try the allergen filter and design a cake.</p>
+          <a class="btn btn-butter" href="index.html">Open the website <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot slim"><div class="wrap"><p>Design inspiration · UX/UI case study. Research figures and test results are illustrative.</p></div></footer>
+  <script>
+    const links = [...document.querySelectorAll('.phase-nav a')];
+    const io = new IntersectionObserver((entries) => entries.forEach((e) => {
+      if (!e.isIntersecting) return;
+      links.forEach((a) => {
+        if (a.getAttribute('href') !== '#' + e.target.id) return a.removeAttribute('aria-current');
+        a.setAttribute('aria-current', 'location');
+        a.closest('ol').scrollTo({ left: a.parentElement.offsetLeft - 16, behavior: 'smooth' });
+      });
+    }), { rootMargin: '-40% 0px -55% 0px' });
+    document.querySelectorAll('main section[id]').forEach((s) => io.observe(s));
+  </script>
+</body>
+</html>
