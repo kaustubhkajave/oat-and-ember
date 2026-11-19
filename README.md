@@ -1,6 +1,6 @@
 # Oat & Ember Bakehouse: Bakery Website & Project Hub
 
-Design inspiration: a UX/UI website project presented as client work, for a small neighbourhood bakery in Westbrook.
+Prototype: a UX/UI website project presented as client work, for a small neighbourhood bakery in Westbrook.
 
 - **`index.html`: the website.** Live stock and reserve-for-pickup, an allergen exclusion filter, a bake schedule, a cake builder with a live preview, opening hours and FAQ.
 - **`project.html`: the project hub.** The case study a client would receive: brief, sell-out analysis, counter observation, cake-DM audit, personas, **service blueprint**, wireframes, visual design, usability testing and handoff.
