@@ -47,6 +47,8 @@ section { padding: 96px 0; }
 /* top bar */
 .mock-bar { background: var(--crust); color: #e9dccb; font-size: 13px; display: flex; justify-content: center; align-items: center; gap: 12px; flex-wrap: wrap; padding: 8px 16px; }
 .mock-bar strong { color: #fff; font-weight: 600; }
+.mock-back { display: inline-flex; align-items: center; gap: 6px; min-height: 28px; padding: 0 12px 0 8px; border-radius: 999px; color: #fff; font-weight: 600; text-decoration: none; }
+.mock-back:hover { background: rgba(255,255,255,.12); }
 .mock-tabs { display: inline-flex; background: rgba(255,255,255,.1); border-radius: 999px; padding: 2px; }
 .mock-tabs a { color: #e9dccb; text-decoration: none; padding: 4px 12px; border-radius: 999px; font-weight: 500; }
 .mock-tabs a[aria-current="page"] { background: var(--butter); color: var(--crust); }
